@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Nav.css";
 
 function Nav() {
+  const [show, setShow] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) {
+        setShow(true);
+      } else setShow(false);
+    });
+    // return () => {
+    //   window.removeEventListener("scroll");
+    // };
+  }, []);
   return (
-    <div className="logos">
+    <div className={`logos ${show && "navBlack"}`}>
       <img
         className="netflixlogo"
         src={`https://thewhitonline.com/wp-content/uploads/2020/09/netflix-logo.png`}

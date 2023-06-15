@@ -2,7 +2,7 @@
   width: 80px;
 }
 .avatarLogo {
-  width: 30px;
+  width: 40px;
 }
 .logos {
   position: fixed;
@@ -10,4 +10,7 @@
   justify-content: space-between;
   width: 100%;
   padding: 20px;
+}
+.navBlack {
+  background-color: black;
 }

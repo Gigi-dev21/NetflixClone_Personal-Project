@@ -17,6 +17,10 @@ function Banner() {
   }, []);
   console.log(movies);
 
+  function truncate(str, n) {
+    return str?.length > n ? str.substring(0, n - 1) + "..." : str;
+  }
+
   return (
     <div>
       <header
@@ -35,8 +39,11 @@ function Banner() {
             <button className="bannerButtons">Play</button>
             <button className="bannerButtons">My list</button>
           </div>
-          <h1 className="bannerDescription">{movies?.overview}</h1>
+          <h1 className="bannerDescription">
+            {truncate(movies?.overview, 150)}
+          </h1>
         </div>
+        <div className="fadebottom"></div>
       </header>
     </div>
   );

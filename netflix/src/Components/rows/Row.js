@@ -17,10 +17,11 @@ function Row({ title, fetchUrl, isLargeRow }) {
 
   console.log(movies);
 
+  // dont understand this///
   const opts = {
-    height: "390",
+    height: "390px",
     width: "100%",
-    playervar: {
+    playerVars: {
       autoplay: 1,
     },
   };

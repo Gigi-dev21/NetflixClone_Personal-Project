@@ -33,12 +33,12 @@
   background-color: rgba(51, 51, 51, 0.5);
 }
 
-.bannerButtons:hover {
-  height: 3.4rem;
-  /* background-image: linear-gradient(
+.fadebottom {
+  height: 16.4rem;
+  background-image: linear-gradient(
     180deg,
     transparent,
     rgba(37, 37, 37, 0.61),
     #111
-  ); */
+  );
 }
