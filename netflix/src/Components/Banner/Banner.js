@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import "./header.css";
+import "./banner.css";
 import "../../requests/requestPage";
 import requests from "../../requests/requestPage";
 
-function Header() {
+function Banner() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -16,6 +16,7 @@ function Header() {
       });
   }, []);
   console.log(movies);
+
   return (
     <div>
       <header
@@ -26,19 +27,19 @@ function Header() {
           backgroundSize: "cover",
         }}
       >
-        <div className="banner__contents">
-          <h1 className="banner__title">
+        <div className="banneContents">
+          <h1 className="bannerTitle">
             {movies.title || movies.name || movies.original_name}
           </h1>
-          <div className="banner__contents">
-            <button className="banner__buttons">Play</button>
-            <button className="banner__buttons">My list</button>
+          <div className="bannerContents">
+            <button className="bannerButtons">Play</button>
+            <button className="bannerButtons">My list</button>
           </div>
-          <h1 className="banner__description">{movies?.overview}</h1>
+          <h1 className="bannerDescription">{movies?.overview}</h1>
         </div>
       </header>
     </div>
   );
 }
 
-export default Header;
+export default Banner;

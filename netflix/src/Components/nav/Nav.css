@@ -1,0 +1,13 @@
+.netflixlogo {
+  width: 80px;
+}
+.avatarLogo {
+  width: 30px;
+}
+.logos {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+}

@@ -3,27 +3,27 @@
   font-size: 20px;
   padding-top: 15px;
 }
-.row__poster {
+.rowPoster {
   width: 100%;
   object-fit: contain;
   max-height: 100px;
   margin-right: 10px;
   transition: transform 450ms;
 }
-.row__posters {
+.rowPosters {
   display: flex;
   padding: 20px;
   overflow-x: scroll;
   overflow-y: hidden;
 }
-.row__posters::-webkit-scrollbar {
+.rowPosters::-webkit-scrollbar {
   display: none;
 }
 
-.row__poster:hover {
+.rowPoster:hover {
   transform: scale(1.08);
 }
-.row__posterLarge {
+.largePoster {
   max-height: 250px;
 }
 .row {

@@ -2,16 +2,17 @@ import "./App.css";
 // BOOTSTRAP///
 import "../src/Resources/bootstrap.css";
 //////
-import Header from "./Components/header/Header";
+
 import Nav from "./Components/nav/Nav";
 import Row from "./Components/rows/Row";
 import requestPage from "./requests/requestPage";
+import Banner from "./Components/Banner/Banner";
 
 function App() {
   return (
     <div className="App">
       <Nav />
-      <Header />
+      <Banner />
       <Row
         title="NETFLIX ORGINALS"
         fetchUrl={requestPage.fetchNetflix0riginals}
