@@ -15,9 +15,6 @@ function Row({ title, fetchUrl, isLargeRow }) {
       });
   }, [fetchUrl]);
 
-  console.log(movies);
-
-  // dont understand this///
   const opts = {
     height: "390px",
     width: "100%",
@@ -40,23 +37,25 @@ function Row({ title, fetchUrl, isLargeRow }) {
   };
 
   return (
-    <div className="row">
-      <div className="titles bold">{title}</div>
-      <div className="rowPosters">
-        {movies.map((data) => (
-          <img
-            onClick={() => handleClick(data)}
-            className={`rowPoster ${isLargeRow && "largePoster"}`}
-            key={data.id}
-            src={`https://image.tmdb.org/t/p/original/${
-              isLargeRow ? data.poster_path : data.backdrop_path
-            }`}
-            alt={data.name}
-          />
-        ))}
-      </div>
-      <div style={{ padding: "40px" }}>
-        {trailer && <YouTube videoId={trailer} opts={opts} />}
+    <div className="containers">
+      <div className="row">
+        <div className="titles ">{title}</div>
+        <div className="rowPosters">
+          {movies.map((data) => (
+            <img
+              onClick={() => handleClick(data)}
+              className={`rowPoster ${isLargeRow && "largePoster"}`}
+              key={data.id}
+              src={`https://image.tmdb.org/t/p/original/${
+                isLargeRow ? data.poster_path : data.backdrop_path
+              }`}
+              alt={data.name}
+            />
+          ))}
+        </div>
+        <div style={{ padding: "40px", width: "1300px" }}>
+          {trailer && <YouTube videoId={trailer} opts={opts} />}
+        </div>
       </div>
     </div>
   );
