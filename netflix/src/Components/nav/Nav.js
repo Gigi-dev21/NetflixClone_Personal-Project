@@ -16,7 +16,7 @@ function Nav() {
     <div className={`logos ${show && "navBlack"}`}>
       <img
         className="netflixlogo"
-        src={`https://thewhitonline.com/wp-content/uploads/2020/09/netflix-logo.png`}
+        src={`https://1000logos.net/wp-content/uploads/2017/05/Netflix-Logo.png`}
       />
       <img
         className="avatarLogo"
