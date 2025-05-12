@@ -8,7 +8,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
   const [trailer, setTrailer] = useState("");
 
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/${fetchUrl}`)
+    fetch(`https://api.themoviedb.org/3${fetchUrl}`)
       .then((res) => res.json())
       .then((data) => {
         setMovies(data.results);

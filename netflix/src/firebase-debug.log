@@ -1,0 +1,33 @@
+[debug] [2025-05-12T21:22:45.220Z] ----------------------------------------------------------------------
+[debug] [2025-05-12T21:22:45.220Z] Command:       /opt/homebrew/Cellar/node@18/18.20.7/bin/node /opt/homebrew/bin/firebase deploy
+[debug] [2025-05-12T21:22:45.221Z] CLI Version:   13.9.0
+[debug] [2025-05-12T21:22:45.221Z] Platform:      darwin
+[debug] [2025-05-12T21:22:45.221Z] Node Version:  v18.20.7
+[debug] [2025-05-12T21:22:45.222Z] Time:          Mon May 12 2025 14:22:45 GMT-0700 (Pacific Daylight Time)
+[debug] [2025-05-12T21:22:45.222Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-05-12T21:22:45.263Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-05-12T21:22:45.263Z] > authorizing via signed-in user (embetm27@gmail.com)
+[debug] [2025-05-12T21:22:45.263Z] [iam] checking project netflix-clone-5ba65 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-05-12T21:22:45.264Z] > refreshing access token with scopes: []
+[debug] [2025-05-12T21:22:45.265Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-05-12T21:22:45.265Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-05-12T21:22:45.381Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2025-05-12T21:22:45.381Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-05-12T21:22:45.381Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflix-clone-5ba65:testIamPermissions [none]
+[debug] [2025-05-12T21:22:45.381Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflix-clone-5ba65:testIamPermissions x-goog-quota-user=projects/netflix-clone-5ba65
+[debug] [2025-05-12T21:22:45.381Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflix-clone-5ba65:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-05-12T21:22:45.450Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflix-clone-5ba65:testIamPermissions 401
+[debug] [2025-05-12T21:22:45.450Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflix-clone-5ba65:testIamPermissions {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"method":"google.cloudresourcemanager.v1.Projects.TestIamPermissions","service":"cloudresourcemanager.googleapis.com"}}]}}
+[debug] [2025-05-12T21:22:45.452Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2025-05-12T21:22:45.452Z] > refreshing access token with scopes: []
+[debug] [2025-05-12T21:22:45.452Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-05-12T21:22:45.452Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-05-12T21:22:45.551Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2025-05-12T21:22:45.551Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-05-12T21:22:45.552Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/netflix-clone-5ba65 [none]
+[debug] [2025-05-12T21:22:45.706Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/netflix-clone-5ba65 401
+[debug] [2025-05-12T21:22:45.706Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/netflix-clone-5ba65 {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2025-05-12T21:22:45.707Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[error] 
+[error] Error: Assertion failed: resolving hosting target of a site with no site name or target name. This should have caused an error earlier

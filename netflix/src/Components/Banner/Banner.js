@@ -7,7 +7,7 @@ function Banner() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/${requests.fetchNetflix0riginals}`)
+    fetch(`https://api.themoviedb.org/3${requests.fetchNetflix0riginals}`)
       .then((res) => res.json())
       .then((data) => {
         setMovies(
